@@ -1,0 +1,123 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
+
+
+driver = webdriver.Chrome(executable_path ='/Users/danilenkaalena/Downloads/chromedriver')
+driver.get('https://chykalophia.com')
+
+driver.maximize_window()
+#verify footer (social media)
+#Linkedin button
+linkedin_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item']")
+linkedin_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#Facebook button
+facebook_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][2]")
+facebook_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#twitter button
+twitter_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][3]")
+twitter_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#instagram button
+instagram_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][4]")
+instagram_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#youtube button
+youtube_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][5]")
+youtube_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#github button
+github_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][6]")
+github_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+
+#Behance button
+behance_btn = driver.find_element_by_xpath("//span[@class='elementor-grid-item'][7]")
+behance_btn.click()
+p = driver.current_window_handle
+parent = driver.window_handles[0]
+chld = driver.window_handles[1]
+
+#switch to browser tab
+driver.switch_to.window(chld)
+print("Page title for browser tab:")
+print(driver.title)
+driver.close()
+driver.switch_to.window(parent)
+print("Page title for parent window")
+print(driver.title)
+driver.close()
+driver.quit()
+
