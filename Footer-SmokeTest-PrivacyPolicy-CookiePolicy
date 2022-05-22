@@ -1,0 +1,27 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
+
+
+driver = webdriver.Chrome(executable_path ='/Users/danilenkaalena/Downloads/chromedriver')
+driver.get('https://chykalophia.com')
+
+driver.maximize_window()
+#verify footer (Privacy Policy/Cookie Policy)
+#Privacy Policy button
+PrivacyPolicy_btn = driver.find_element_by_xpath("//a[contains (text(),'Privacy Policy')]")
+PrivacyPolicy_btn.click()
+get_current_url = driver.current_url
+print("Privacy Policy Current URL = "+get_current_url)
+#driver.close()
+
+driver = webdriver.Chrome(executable_path ='/Users/danilenkaalena/Downloads/chromedriver')
+driver.get('https://chykalophia.com')
+
+driver.maximize_window()
+#Cookie Policy button
+CookiePolicy_btn = driver.find_element_by_xpath("//a[contains (text(),'Cookie Policy')]")
+CookiePolicy_btn.click()
+get_current_url = driver.current_url
+print("Cookie Policy Current URL = "+get_current_url)
+#driver.close()
+
